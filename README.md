@@ -16,12 +16,12 @@ joblib
 tensorboard
 
 ## Project Structure
-
+```
 ├── CREMA-D/     # Folder containing model and scripts for the CREMA-D dataset
 ├── RAVDESS/     # Folder containing model and scripts for the RAVDESS dataset
 ├── SAVEE/       # Folder containing model and scripts for the SAVEE dataset
 └── README.md    # This file
-
+```
 
 
 ## train and test
