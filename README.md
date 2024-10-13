@@ -17,10 +17,43 @@ tensorboard
 
 ## Project Structure
 ```
-├── CREMA-D/     # Folder containing model and scripts for the CREMA-D dataset
-├── RAVDESS/     # Folder containing model and scripts for the RAVDESS dataset
-├── SAVEE/       # Folder containing model and scripts for the SAVEE dataset
-└── README.md    # This file
+├── CREMA-D/                      # Folder containing model and scripts for the CREMA-D dataset
+│   ├── ExtractedFeatures/        # Folder containing extracted features for the dataset
+│   └── scripts/                  # Folder containing scripts to process and train models
+│       ├── convert-avi.py        # Script to convert files to .avi format
+│       ├── preprocess.py         # Script to preprocess data for the model
+│       ├── split_data.py         # Script to split the dataset into training and validation
+│       ├── test.py               # Script to test the model on the dataset
+│       ├── train.py              # Script to train the model on the dataset
+│   ├── best_model_parameters.pth # Saved model parameters
+│   ├── pca_audio_model.pkl       # Saved PCA model for audio features
+│   ├── pca_visual_model.pkl      # Saved PCA model for visual features
+│
+├── RAVDESS/                      # Folder containing model and scripts for the RAVDESS dataset
+│   ├── ExtractedFeatures/        # Folder containing extracted features for the dataset
+│   └── scripts/                  # Folder containing scripts to process and train models
+│       ├── convert-avi.py        # Script to convert files to .avi format
+│       ├── preprocess.py         # Script to preprocess data for the model
+│       ├── split_data.py         # Script to split the dataset into training and validation
+│       ├── test.py               # Script to test the model on the dataset
+│       ├── train.py              # Script to train the model on the dataset
+│   ├── best_model_parameters.pth # Saved model parameters
+│   ├── pca_audio_model.pkl       # Saved PCA model for audio features
+│   ├── pca_visual_model.pkl      # Saved PCA model for visual features
+│
+├── SAVEE/                        # Folder containing model and scripts for the SAVEE dataset
+│   ├── ExtractedFeatures/        # Folder containing extracted features for the dataset
+│   └── scripts/                  # Folder containing scripts to process and train models
+│       ├── convert-avi.py        # Script to convert files to .avi format
+│       ├── preprocess.py         # Script to preprocess data for the model
+│       ├── split_data.py         # Script to split the dataset into training and validation
+│       ├── test.py               # Script to test the model on the dataset
+│       ├── train.py              # Script to train the model on the dataset
+│   ├── best_model_parameters.pth # Saved model parameters
+│   ├── pca_audio_model.pkl       # Saved PCA model for audio features
+│   ├── pca_visual_model.pkl      # Saved PCA model for visual features
+└── README.md                     # This file
+
 ```
 
 
