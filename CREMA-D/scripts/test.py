@@ -59,10 +59,10 @@ def evaluate_model(test_loader):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
 
     model = ClassificationModel(
-        input_size=235,
-        hidden_size=512,
-        num_heads=2,
-        num_layers=4,
+         input_size=435, 
+        hidden_size=256,
+        num_heads=4,
+        num_layers=8,
         num_classes=6,
         dropout=0.1
     ).to(device)
@@ -109,5 +109,5 @@ if __name__ == "__main__":
     np.random.seed(seed)
     torch.manual_seed(seed)
 
-    test_loader = load_test_data(apply_pca=True, pca_components=200)
+    test_loader = load_test_data(apply_pca=True, pca_components=400)
     evaluate_model(test_loader)

@@ -134,7 +134,7 @@ class ClassificationModel(nn.Module):
 
 from sklearn.decomposition import PCA
 
-def load_train_val_data(apply_pca=True, pca_audio_components=200, pca_visual_components=35):
+def load_train_val_data(apply_pca=True, pca_audio_components=400, pca_visual_components=35):
     train_visual = np.load('ExtractedFeatures/train_visual.npy', allow_pickle=True)
     train_visual = train_visual.reshape(train_visual.shape[0], -1, train_visual.shape[-1])  # Flatten spatial dimensions
     train_labels = np.load('ExtractedFeatures/train_labels.npy', allow_pickle=True)
@@ -217,10 +217,10 @@ def load_train_val_data(apply_pca=True, pca_audio_components=200, pca_visual_com
 def train_model(train_loader, val_loader):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = ClassificationModel(
-        input_size=235,
-        hidden_size=512,
-        num_heads=2,
-        num_layers=4,
+         input_size=435, 
+        hidden_size=256,
+        num_heads=4,
+        num_layers=8,
         num_classes=6,
         dropout=0.1
     ).to(device)
